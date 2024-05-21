@@ -24,4 +24,5 @@ class Droga:
 if __name__=="__main__":
     d = Droga(["a","b","c","d","e"],[["a","b"],["c","d"],["b","c"],["d","e"]])
     print(d.droga())
-    print
+
+    print(d.droga())
