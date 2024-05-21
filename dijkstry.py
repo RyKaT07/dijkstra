@@ -21,6 +21,9 @@ class Droga:
             return False
         return True
 
+    def Dijkstry(self, wagi):
+
 if __name__=="__main__":
-    d = Droga(["a","b","c","d","e"],[["a","b"],["c","d"],["b","c"],["d","e"]])
-    print(d.droga())
+    d = Droga(["a","b","c","d","e","f"],[["a","b"],["c","d"],["b","c"],["d","e"],["f","e"]])
+    print(d.droga({('a','b'):1 ,('b','c'):2 , ('c','d'):5 , ('a','c'):1 , ('a','d'):1 , ('b','d'):5 , ('c','d'):2}))
+    print(d.Dijkstry([]))
