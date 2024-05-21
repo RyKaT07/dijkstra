@@ -21,9 +21,11 @@ class Droga:
             return False
         return True
 
-    def Dijkstry(self, wagi):
+    def Dijkstry(self, wagi, wierzchołek_startowy):
+        self.wagi = dict(sorted(wagi.items()))
+
 
 if __name__=="__main__":
-    d = Droga(["a","b","c","d","e","f"],[["a","b"],["c","d"],["b","c"],["d","e"],["f","e"]])
-    print(d.droga({('a','b'):1 ,('b','c'):2 , ('c','d'):5 , ('a','c'):1 , ('a','d'):1 , ('b','d'):5 , ('c','d'):2}))
-    print(d.Dijkstry([]))
+    d = Droga(["a","b","c","d","e","f"],[["a","b"],['a','c'],['a','f'],["c","f"],["c","d"],['c','e'],['b','d'],["b","e"],["d","f"],["d","c"],['f','c'],['f','e'],["f","d"]])
+    print(d.droga())
+    print(d.Dijkstry({('a','b'):3 ,('a','c'):10 , ('a','f'):15 , ('c','f'):2 , ('c','d'):7 , ('c','e'):9 , ('b','d'):4, ('b','e'):25 , ('d','f'):5 , ('d','c'):2 , ('f','c'):5 , ('f','e'):6 , ('f','d'):3},'a'))
