@@ -34,7 +34,7 @@ class Droga:
             else:
                 droga_do_poprzedniego = 99999
             if drogi[wierzcholki.index(krawedz[1])][1] > droga_do_poprzedniego + self.wagi[tuple(krawedz)]:
-                drogi[wierzcholki.index(krawedz[1])][1] = self.wagi[tuple(krawedz)]
+                drogi[wierzcholki.index(krawedz[1])][1] = roga_do_poprzedniego + self.wagi[tuple(krawedz)]
                 drogi[wierzcholki.index(krawedz[1])][2] = krawedz[0]
         return drogi
 
